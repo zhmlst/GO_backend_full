@@ -1,8 +1,6 @@
 full backend with go
 
-🚀 Getting Started
-Prerequisites
-Go 1.22+
+#🚀 Getting Started Prerequisites Go 1.22+
 
 Air (for live reloading)
 
