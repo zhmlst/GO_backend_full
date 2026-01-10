@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/sikozonpc/social/internal/env"
+	"github.com/sikozonpc/social/internal/store"
 )
 
 func main() {
@@ -11,8 +12,11 @@ func main() {
 		addr: env.GetString("ADDR", ":8080"),
 	}
 
+	store := store.NeweStorage(nil)
+
 	app := &application{
 		config: cfg,
+		store:  store,
 	}
 
 	mux := app.mount()
